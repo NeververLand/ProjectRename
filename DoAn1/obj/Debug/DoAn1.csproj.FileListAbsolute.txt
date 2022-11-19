@@ -1,0 +1,16 @@
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.AssemblyReference.cache
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.SuggestedBindingRedirects.cache
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\MainWindow.g.cs
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\App.g.cs
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1_MarkupCompile.cache
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1_MarkupCompile.lref
+D:\Code\WPF\DoAn1\DoAn1\bin\Debug\DoAn1.exe.config
+D:\Code\WPF\DoAn1\DoAn1\bin\Debug\DoAn1.exe
+D:\Code\WPF\DoAn1\DoAn1\bin\Debug\DoAn1.pdb
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\MainWindow.baml
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.g.resources
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.Properties.Resources.resources
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.GenerateResource.cache
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.CoreCompileInputs.cache
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.exe
+D:\Code\WPF\DoAn1\DoAn1\obj\Debug\DoAn1.pdb

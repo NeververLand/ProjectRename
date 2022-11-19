@@ -1,0 +1,155 @@
+﻿<Window x:Class="DoAn1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAn1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="770" Width="1510" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0">
+            <Button Width="100" Height="30">
+                <WrapPanel HorizontalAlignment="Center" >
+                    <Image Source="Icon/convert.png" Margin="4 2"/>
+                    <TextBlock Text="Refresh" VerticalAlignment="Center" FontSize="16"/>
+                </WrapPanel>
+            </Button>
+            <Button Width="100" Height="30">
+                <WrapPanel HorizontalAlignment="Center" >
+                    <Image Source="Icon/blue-question.png" Margin="4 2"/>
+                    <TextBlock Text="Help" VerticalAlignment="Center" FontSize="16"/>
+                </WrapPanel>
+            </Button>
+            <Button Width="140" Height="30">
+                <WrapPanel HorizontalAlignment="Center" >
+                    <Image Source="Icon/right-arrow.png" Margin="4 2"/>
+                    <TextBlock Text="START BATCH" VerticalAlignment="Center" FontSize="16"/>
+                </WrapPanel>
+            </Button>
+        </WrapPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="420"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <WrapPanel>
+                    <Button Width="140" Height="30">
+                        <WrapPanel HorizontalAlignment="Center" >
+                            <Image Source="Icon/icons8-add-file-48.png" Margin="4 2"/>
+                            <TextBlock Text="Add Method" VerticalAlignment="Center" FontSize="16"/>
+                        </WrapPanel>
+                    </Button>
+                    <Button Width="140" Height="30">
+                        <WrapPanel>
+                            <Image Source="Icon/icons8-delete-document-20.png" Margin="4 2"/>
+                            <Image Source="Icon/icons8-calendar-50.png" Margin="4 2"/>
+                            <TextBlock Text="Clear" VerticalAlignment="Center" FontSize="16"/>
+                        </WrapPanel>
+                    </Button>
+                    <WrapPanel Width="140" Height="30">
+                        <Button Width="35">
+                            <Image Source="Icon/icons8-end-40.png"/>
+                        </Button>
+                        <Button Width="35">
+                            <Image Source="Icon/icons8-up-32.png" Margin="4 2"/>
+                        </Button>
+                        <Button Width="35">
+                            <Image Source="Icon/icons8-up-32 (1).png" Margin="4 2"/>
+                        </Button>
+                        <Button Width="35">
+                            <Image Source="Icon/icons8-up-40 .png" Width="30"/>
+                        </Button>
+                    </WrapPanel>
+                </WrapPanel>
+                <WrapPanel VerticalAlignment="Center" Height="30">
+                    <Button Width="35">
+                        <Image Source="Icon/icons8-up-32 (1).png" Margin="4 2"/>
+                    </Button>
+                    <Button Width="35">
+                        <Image Source="Icon/icons8-up-32 (1).png" Margin="4 2"/>
+                    </Button>
+                    <TextBlock Text="Presets: " FontSize="18"/>
+                    <ComboBox Width="140"/>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TabControl>
+                    <TabItem Header="Rename files" FontSize="18">
+                        <StackPanel HorizontalAlignment="Left" Width="1090">
+                            <WrapPanel>
+                                <Button Width="100" Height="35" Click="OpenFiles">
+                                    <WrapPanel HorizontalAlignment="Center" >
+                                        <Image Source="Icon/icons8-plus-48.png" Margin="4 2"/>
+                                        <TextBlock Text="Add" VerticalAlignment="Center" FontSize="16"/>
+                                    </WrapPanel>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-end-40.png"/>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-up-32.png" Margin="4 2"/>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-up-32 (1).png" Margin="4 2"/>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-up-40 .png" Width="30"/>
+                                </Button>
+                            </WrapPanel>
+                            <ListView Name="ListViewFiles" ItemsSource="{Binding listdata}" Height="550">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Filename" Width="200" DisplayMemberBinding="{Binding Filename}"/>
+                                        <GridViewColumn Header="New Filename" Width="200" DisplayMemberBinding="{Binding New_Filename}"/>
+                                        <GridViewColumn Header="Path" Width="300" DisplayMemberBinding="{Binding Pathfile}"/>
+                                        <GridViewColumn Header="Extension" Width="130" DisplayMemberBinding="{Binding extension}"/>
+                                        <GridViewColumn Header="New Extension" Width="130" DisplayMemberBinding="{Binding newExtension}"/>
+                                        <GridViewColumn Header="Error" Width="110" DisplayMemberBinding="{Binding newExtension}"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Rename folders" FontSize="18">
+                        <StackPanel HorizontalAlignment="Left" Width="1090">
+                            <WrapPanel>
+                                <Button Width="100" Height="35" Click="OpenFolder">
+                                    <WrapPanel HorizontalAlignment="Center" >
+                                        <Image Source="Icon/icons8-plus-48.png" Margin="4 2"/>
+                                        <TextBlock Text="Add" VerticalAlignment="Center" FontSize="16"/>
+                                    </WrapPanel>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-end-40.png"/>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-up-32.png" Margin="4 2"/>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-up-32 (1).png" Margin="4 2"/>
+                                </Button>
+                                <Button Width="35">
+                                    <Image Source="Icon/icons8-up-40 .png" Width="30"/>
+                                </Button>
+                            </WrapPanel>
+                            <ListView Name="ListViewFolder" ItemsSource="{Binding listfolder}" Height="550">
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Header="Filename" Width="200" DisplayMemberBinding="{Binding folderName}"/>
+                                        <GridViewColumn Header="New Filename" Width="200" DisplayMemberBinding="{Binding newFolderName}"/>
+                                        <GridViewColumn Header="Path" Width="300" DisplayMemberBinding="{Binding folderPath}"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
